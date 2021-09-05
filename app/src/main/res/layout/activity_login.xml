@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtusername"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Username :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtusername"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:layout_toRightOf="@+id/txtusername" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/txtpassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Password :"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge"-->
+<!--        android:layout_below="@+id/txtusername"-->
+<!--        android:layout_marginTop="30dp"/>-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editpassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignTop="@+id/txtpassword"-->
+<!--        android:layout_toRightOf="@+id/txtpassword"/>-->
+
+    <TextView
+        android:id="@+id/txtpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password :"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginRight="7dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtpassword"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/txtpassword" />
+
+    <Button
+        android:id="@+id/loginbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editpassword"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="125dp"
+        android:text="LOGIN" />
+
+
+</RelativeLayout>
