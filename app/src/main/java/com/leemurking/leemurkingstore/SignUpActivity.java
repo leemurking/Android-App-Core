@@ -47,6 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
                             ,"Validation Failed,",Toast.LENGTH_SHORT).show();
                 }
 
+
                 Intent intent = new Intent(SignUpActivity.this, HomePageActivity.class);
                 startActivity(intent);
             }
