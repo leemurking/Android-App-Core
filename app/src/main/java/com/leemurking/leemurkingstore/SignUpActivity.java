@@ -35,6 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
         awesomeValidation.addValidation(this, R.id.signupeditpassword,
                 ".{6}", R.string.invalid_password);
 
+
         signupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
