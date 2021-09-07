@@ -19,7 +19,7 @@
             android:layout_width="220dp"
             android:layout_height="241dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo" />
+            android:src="@drawable/wool" />
 
         <TextView
             android:id="@+id/welcome"

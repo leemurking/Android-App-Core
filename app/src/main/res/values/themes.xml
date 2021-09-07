@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.LeemurkingStore" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Theme.LeemurkingStore" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryText</item>
         <item name="colorPrimaryDark">@color/colorPrimaryText</item>
         <item name="colorAccent">@color/colorAccent</item>
