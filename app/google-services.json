@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "377308301944",
+    "project_id": "leemurkingstore",
+    "storage_bucket": "leemurkingstore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377308301944:android:19143a98713491e7adfb8d",
+        "android_client_info": {
+          "package_name": "com.leemurking.leemurkingstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377308301944-7ad05fctl7hef9muhrlcpt5q72alqbch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZdQAbWD20tYMYuVsytXU06szWjOA9fEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377308301944-7ad05fctl7hef9muhrlcpt5q72alqbch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

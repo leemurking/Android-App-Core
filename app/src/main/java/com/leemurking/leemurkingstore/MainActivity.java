@@ -26,9 +26,6 @@ public class MainActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        image = findViewById(R.id.image);
-//        image.animate().alpha(0).setDuration(0);
-
         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

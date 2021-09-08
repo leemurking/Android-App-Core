@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -19,7 +20,7 @@
             android:layout_width="220dp"
             android:layout_height="241dp"
             android:layout_gravity="center"
-            android:src="@drawable/wool" />
+            android:src="@drawable/trial" />
 
         <TextView
             android:id="@+id/welcome"
@@ -39,13 +40,41 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/welcome"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/edit"
             android:drawableLeft="@drawable/ic_person_black_24dp"
             android:drawablePadding="55dp"
             android:hint="UserName"
             android:inputType="textPersonName"
             android:textColorHint="@color/colorPrimaryText" />
+
+        <EditText
+            android:id="@+id/signupeditemail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signupeditusername"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit"
+            android:drawableLeft="@drawable/ic_email_24"
+            android:drawablePadding="55dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorPrimaryText" />
+        <EditText
+            android:id="@+id/signupeditphonenumber"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signupeditusername"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit"
+            android:drawableLeft="@drawable/ic_phone_24"
+            android:drawablePadding="55dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColorHint="@color/colorPrimaryText" />
+
 
         <EditText
             android:id="@+id/signupeditpassword"
@@ -55,13 +84,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/edit"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableLeft="@drawable/ic_lock_24"
             android:drawablePadding="65dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:textColorHint="@color/colorPrimaryText" />
-
-
 
         <Button
             android:id="@+id/signupbutton"

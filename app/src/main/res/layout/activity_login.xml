@@ -20,7 +20,7 @@
             android:layout_width="220dp"
             android:layout_height="241dp"
             android:layout_gravity="center"
-            android:src="@drawable/wool" />
+            android:src="@drawable/shoewallpaper" />
 
         <TextView
             android:id="@+id/welcome"
@@ -35,7 +35,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editusername"
+            android:id="@+id/editemail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/welcome"
@@ -44,8 +44,8 @@
             android:background="@drawable/edit"
             android:drawableLeft="@drawable/ic_person_black_24dp"
             android:drawablePadding="55dp"
-            android:hint="UserName"
-            android:inputType="textPersonName"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
             android:textColorHint="@color/colorPrimaryText" />
 
         <EditText
@@ -62,18 +62,6 @@
             android:inputType="textPassword"
             android:textColorHint="@color/colorPrimaryText" />
 
-        <TextView
-            android:id="@+id/forgotpassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="-100dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/aclonica"
-            android:text="Forgot Password     "
-            android:textColor="@color/colorPrimaryText"
-            android:textSize="15dp"
-            android:textStyle="bold" />
         <Button
             android:id="@+id/newloginbutton"
             android:layout_width="300dp"
@@ -85,8 +73,22 @@
             android:background="@drawable/button"
             />
 
+        <Button
+            android:id="@+id/forgotpassbutton"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="-100dp"
+            android:text="forgot password"
+            android:textSize="10sp"
+            android:textColor="@color/colorTextIcons"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:textStyle="bold"
+            />
+
         <TextView
-            android:id="@+id/signup"
+            android:id="@+id/signuptext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't have an account? Sign up"
@@ -98,7 +100,7 @@
             />
 
         <Button
-            android:id="@+id/signupbutton"
+            android:id="@+id/signupbutton1"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:text="SIGN UP"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
@@ -94,13 +95,20 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
                     android:layout_centerVertical="true"
-                    android:text="SHOES"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="18sp" />
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="-0dp"
+                    android:background="@drawable/button"
+                    android:onClick="logout"
+                    android:text="LOGOUT"
+                    android:textColor="@color/colorTextIcons"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -156,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="Ksh 2000"
+                android:text="Best Shoe Game"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="18sp" />
 
@@ -178,6 +186,7 @@
 
 
                 <TextView
+                    android:id="@+id/hptext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -194,41 +203,175 @@
                     android:textColor="@color/colorTextIcons"
                     android:textSize="16sp" />
 
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/hptext"
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_row="0"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/shoe2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Jordans"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_row="1"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/shoe4" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Jordans"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_row="0"
+                        android:layout_rowWeight="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/trial3" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jordans"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_row="1"
+                        android:layout_rowWeight="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/trial" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jordans"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                </GridLayout>
+
 
             </RelativeLayout>
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
 
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="-367dp"
-                        android:layout_marginTop="53dp"
-                        android:layout_marginBottom="0dp"
-                        android:background="@drawable/white_circular"
-                        android:src="@drawable/shoe2" />
-
-                    </LinearLayout>
 
 
-                </LinearLayout>
 
-            </HorizontalScrollView>
+
+
 
 
         </LinearLayout>
