@@ -31,8 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth fAuth;
     EditText editemail,editpassword;
 
-    private FirebaseDatabase db = FirebaseDatabase.getInstance();
-    private DatabaseReference root = db.getReference().child("Users");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +67,6 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                HashMap<String, String> userMap = new HashMap<>();
-
-                userMap.put( "email", email);
-                userMap.put( "password", password);
-
-                root.push().setValue(userMap);
 
                 // Authenticate the user in Firebase
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

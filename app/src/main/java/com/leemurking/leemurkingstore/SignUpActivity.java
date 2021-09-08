@@ -33,8 +33,8 @@ public class SignUpActivity extends AppCompatActivity {
     EditText signupeditpassword;
     ProgressBar progressBar;
 
-//    private FirebaseDatabase db = com.google.firebase.database.FirebaseDatabase.getInstance();
-//    private DatabaseReference root = db.getReference().child("Users");
+    private FirebaseDatabase db = com.google.firebase.database.FirebaseDatabase.getInstance();
+    private DatabaseReference root = db.getReference().child("Users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,14 +79,14 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
 
-//                HashMap<String, String> userMap = new HashMap<>();
-//
-//                userMap.put( "username", username);
-//                userMap.put( "email", email);
-//                userMap.put( "phone number", phone);
-//                userMap.put( "password", password);
-//
-//                root.push().setValue(userMap);
+                HashMap<String, String> userMap = new HashMap<>();
+
+                userMap.put( "username", username);
+                userMap.put( "email", email);
+                userMap.put( "phone number", phone);
+                userMap.put( "password", password);
+
+                root.push().setValue(userMap);
 
 
                 // Register the user in Firebase
