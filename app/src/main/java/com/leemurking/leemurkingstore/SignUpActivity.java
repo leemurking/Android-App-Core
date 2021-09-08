@@ -19,6 +19,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity {
     Button signupbutton;
@@ -28,6 +32,9 @@ public class SignUpActivity extends AppCompatActivity {
     EditText signupeditphonenumber;
     EditText signupeditpassword;
     ProgressBar progressBar;
+
+//    private FirebaseDatabase db = com.google.firebase.database.FirebaseDatabase.getInstance();
+//    private DatabaseReference root = db.getReference().child("Users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +59,9 @@ public class SignUpActivity extends AppCompatActivity {
         signupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String username = signupeditusername.getText().toString().trim();
                 String email = signupeditemail.getText().toString().trim();
+                String phone = signupeditphonenumber.getText().toString().trim();
                 String password = signupeditpassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)) {
@@ -69,6 +78,15 @@ public class SignUpActivity extends AppCompatActivity {
                     signupeditpassword.setError("Password must be >= 6 characters");
                     return;
                 }
+
+//                HashMap<String, String> userMap = new HashMap<>();
+//
+//                userMap.put( "username", username);
+//                userMap.put( "email", email);
+//                userMap.put( "phone number", phone);
+//                userMap.put( "password", password);
+//
+//                root.push().setValue(userMap);
 
 
                 // Register the user in Firebase

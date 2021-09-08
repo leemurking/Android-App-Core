@@ -19,6 +19,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
     Button newloginbutton;
@@ -26,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
     TextView welcome, signuptext;
     FirebaseAuth fAuth;
     EditText editemail,editpassword;
+
+    private FirebaseDatabase db = FirebaseDatabase.getInstance();
+    private DatabaseReference root = db.getReference().child("Users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +50,8 @@ public class LoginActivity extends AppCompatActivity {
         newloginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = editemail.getText().toString().trim();
-                String password = editpassword.getText().toString().trim();
+                String email = editemail.getText().toString();
+                String password = editpassword.getText().toString();
 
                 if(TextUtils.isEmpty(email)) {
                     editemail.setError("Email is Required");
@@ -61,9 +68,15 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
+                HashMap<String, String> userMap = new HashMap<>();
+
+                userMap.put( "email", email);
+                userMap.put( "password", password);
+
+                root.push().setValue(userMap);
 
                 // Authenticate the user in Firebase
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
@@ -74,10 +87,9 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
-
-
             }
         });
+
         signupbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
