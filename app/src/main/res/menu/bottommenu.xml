@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/homeclip"
+        android:title="Home"
+        android:icon="@drawable/homes"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/search1"
+        android:title="Search"
+        android:icon="@drawable/searches"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/log33"
+        android:title="Account"
+        android:icon="@drawable/vecacc"
+        app:showAsAction="always"/>
+
+
+
+
+</menu>

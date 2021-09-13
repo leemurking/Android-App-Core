@@ -3,25 +3,50 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/account.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/black_bg.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btn_custom.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable/button.xml" value="0.10462962962962963" />
         <entry key="app/src/main/res/drawable/edit.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/et_custom.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable/grey_background_curved.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/homes.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_arrow_left.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable/ic_arrow_right.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/drawable/ic_person_black_24dp.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/search_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/searches.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/vecacc.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/white_circular.xml" value="0.1" />
         <entry key="app/src/main/res/font/aclonica.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/font/alex_brush.xml" value="0.2537037037037037" />
         <entry key="app/src/main/res/layout/activity.xml" value="0.13221884498480244" />
-        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_admin_add_new_product.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/activity_admin_category.xml" value="0.1911231884057971" />
+        <entry key="app/src/main/res/layout/activity_admin_new_orders.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_admin_user_products.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cart.xml" value="0.1911231884057971" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content.xml" value="0.1911231884057971" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.10555555555555556" />
+        <entry key="app/src/main/res/layout/fragment_account2.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/layout/fragment_all.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_cat_one.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_cat_two.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/layout/header.xml" value="0.1911231884057971" />
+        <entry key="app/src/main/res/layout/item_data.xml" value="0.1339918946301925" />
         <entry key="app/src/main/res/layout/log_in.xml" value="0.1" />
         <entry key="app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.1911231884057971" />
+        <entry key="app/src/main/res/menu/bottommenu.xml" value="0.15555555555555556" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.2755208333333333" />
       </map>
     </option>
   </component>

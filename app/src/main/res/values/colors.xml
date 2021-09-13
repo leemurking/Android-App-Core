@@ -8,4 +8,11 @@
     <color name="colorPrimaryText">#1F1E1E</color>
     <color name="colorSecondaryText">#727272</color>
     <color name="colorDivider">#B6B6B6</color>
+    <color name="home">#00BCD4</color>
+    <color name="search">#FFC107</color>
+    <color name="log">#EC0909</color>
+
+
+
+
 </resources>

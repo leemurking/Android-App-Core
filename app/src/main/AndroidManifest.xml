@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leemurking.leemurkingstore">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,6 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LeemurkingStore">
+        <activity
+            android:name=".CartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminUserProductsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminNewOrdersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminAddNewProduct"
+            android:exported="true" />
         <activity
             android:name=".SignUpActivity"
             android:exported="true" />
