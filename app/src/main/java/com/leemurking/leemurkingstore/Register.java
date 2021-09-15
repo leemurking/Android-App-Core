@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +29,8 @@ public class Register extends AppCompatActivity {
     private EditText register_username_input, register_phone_number_input, register_password_input;
     private ProgressDialog loadingBar;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +43,7 @@ public class Register extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {CreateAccount();}
+            public void onClick(View view) { CreateAccount();}
         });
     }
     private void CreateAccount(){

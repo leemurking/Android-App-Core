@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.leemurking.leemurkingstore">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,7 +11,23 @@
         android:label="Leemurking"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LeemurkingStore">
+        android:theme="@style/Theme.LeemurkingStore"
+        tools:replace="android:label,android:theme">
+        <activity
+            android:name=".ProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ConfirmFinalOrderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SearchProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProductDetailsActivity"
+            android:exported="true" />
         <activity
             android:name=".CartActivity"
             android:exported="true" />
@@ -31,12 +48,6 @@
             android:exported="true" />
         <activity
             android:name=".AdminAddNewProduct"
-            android:exported="true" />
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HomePageActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
