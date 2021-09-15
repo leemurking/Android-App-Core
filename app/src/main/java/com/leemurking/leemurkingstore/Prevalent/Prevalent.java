@@ -1,0 +1,11 @@
+package com.leemurking.leemurkingstore.Prevalent;
+
+import com.leemurking.leemurkingstore.Model.Users;
+
+public class Prevalent {
+
+    public static Users currentOnlineUser;
+
+    public static final String UserPhoneKey = "UserPhone";
+    public static final String UserPasswordKey = "UserPassword";
+}

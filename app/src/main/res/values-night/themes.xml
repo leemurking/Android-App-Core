@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.LeemurkingStore" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#000</item>
 
         <!-- Secondary brand color. -->
 

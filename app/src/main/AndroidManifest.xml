@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.leemurking.leemurkingstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Leemurking"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LeemurkingStore">
+        android:theme="@style/Theme.LeemurkingStore"
+        tools:replace="android:label,android:theme">
         <activity
-            android:name=".HomePageActivity"
+            android:name=".ProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ConfirmFinalOrderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SearchProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProductDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminUserProductsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminNewOrdersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminAddNewProduct"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
