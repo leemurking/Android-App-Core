@@ -39,6 +39,7 @@
         <entry key="app/src/main/res/layout/activity_search_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/content.xml" value="0.1911231884057971" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.10555555555555556" />
         <entry key="app/src/main/res/layout/fragment_account2.xml" value="0.21603260869565216" />
