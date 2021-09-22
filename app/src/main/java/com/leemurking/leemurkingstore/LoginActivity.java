@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 login_btn.setText("Login Admin");
                 admin_panel_link.setVisibility(View.INVISIBLE);
                 not_admin_panel_link.setVisibility(View.VISIBLE);
-                parentDbName = "Admins";
+                parentDbName = "Admin";
             }
         });
         not_admin_panel_link.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            if(parentDbName.equals("Admins"))
+                            if(parentDbName.equals("Admin"))
                             {
                                 Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
