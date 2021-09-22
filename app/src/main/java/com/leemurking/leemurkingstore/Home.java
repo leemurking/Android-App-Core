@@ -2,12 +2,15 @@ package com.leemurking.leemurkingstore;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -17,6 +20,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
@@ -24,16 +29,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.leemurking.leemurkingstore.Interfaces.YelpApi;
 import com.leemurking.leemurkingstore.Interfaces.YelpApiResponse;
 import com.leemurking.leemurkingstore.Interfaces.YelpClient;
-import com.leemurking.leemurkingstore.Model.Business;
-import com.leemurking.leemurkingstore.Model.Category;
-
-import java.util.List;
+import com.leemurking.leemurkingstore.Model.Products;
+import com.leemurking.leemurkingstore.ViewHolder.ProductViewHolder;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import io.paperdb.Paper;
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DatabaseReference ProductsRef;
@@ -100,35 +102,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         recyclerView.setLayoutManager(layoutManager);
 
 
-        call.enqueue(new Callback<YelpApiResponse>() {
-            @Override
-            public void onResponse(Call<YelpApiResponse> call, Response<YelpApiResponse> response) {
-                if (response.isSuccessful()) {
-                    List<Business> restaurantsList = response.body().getBusinesses();
-                    String[] restaurants = new String[restaurantsList.size()];
-                    String[] categories = new String[restaurantsList.size()];
-
-                    for (int i = 0; i < restaurants.length; i++){
-                        restaurants[i] = restaurantsList.get(i).getName();
-                    }
-
-                    for (int i = 0; i < categories.length; i++) {
-                        Category category = restaurantsList.get(i).getCategories().get(0);
-                        categories[i] = category.getTitle();
-                    }
-
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<YelpApiResponse> call, Throwable t) {
-
-            }
-
-        });
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,29 +112,71 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         });
 
     }
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>()
-//                .setQuery(ProductsRef, Products.class)
-//                .build();
-//
-//        FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
-//                new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
-//                    private Object Viewholder;
-//
-//                    @NonNull
-//                    @Override
-//                    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
-//                        ProductViewHolder holder = new ProductViewHolder(view);
-//                        return (RecyclerView.ViewHolder) Viewholder;
-//                    }
-//                };
-//        recyclerView.setAdapter(adapter);
-//        adapter.startListening();
-//
-//    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Products");
+        FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>()
+                .setQuery(ProductsRef, Products.class)
+                .build();
+        com.firebase.ui.database.FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter;
+        adapter = new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model) {
+                holder.txtProductName.setText(model.getPname());
+                holder.txtProductDescription.setText(model.getDescription());
+                holder.txtProductPrice.setText("Price = " + model.getPrice() + "Rs.");
+                Picasso.get().load(model.getImage()).into(holder.imageView);
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent =new Intent(Home.this,ProductDetailsActivity.class);
+                        intent.putExtra("pid",model.getPid());
+                        startActivity(intent);
+                    }
+                });
+            }
+
+            @NonNull
+            @Override
+            public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
+                ProductViewHolder holder = new ProductViewHolder(view);
+                return holder;
+            }
+        };
+        options = new FirebaseRecyclerOptions.Builder<Products>()
+                .setQuery(ProductsRef, Products.class)
+                .build();
+
+        adapter =  new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model)
+                    {
+                        holder.txtProductName.setText(model.getPname());
+                        holder.txtProductDescription.setText(model.getDescription());
+                        holder.txtProductPrice.setText("Price = " + model.getPrice() + "Kshs.");
+                        Picasso.get().load(model.getImage()).into(holder.imageView);
+                        holder.imageView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent =new Intent(Home.this,ProductDetailsActivity.class);
+                                intent.putExtra("pid",model.getPid());
+                                startActivity(intent);
+                            }
+                        });
+                    }
+
+                    @NonNull
+                    @Override
+                    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout, parent, false);
+                        ProductViewHolder holder = new ProductViewHolder(view);
+                        return holder;
+                    }                };
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
+    }
 
     
     @Override

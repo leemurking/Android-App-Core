@@ -1,8 +1,5 @@
 package com.leemurking.leemurkingstore;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -32,7 +32,7 @@ import java.util.HashMap;
 public class AdminAddNewProduct extends AppCompatActivity {
 
     private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;
-    private Button newproductbutton;;
+    ;
     private ImageView InputProductImage;
     private EditText productname, productdescription, productprice;
     private static final int GalleryPick = 1;
@@ -55,7 +55,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
 
-        newproductbutton= (Button) findViewById(R.id.admin_add_new_product);
+        Button newproductbutton = (Button) findViewById(R.id.admin_add_new_product);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);
         productname= (EditText) findViewById(R.id.product_name);
         productdescription = (EditText) findViewById(R.id.product_description);

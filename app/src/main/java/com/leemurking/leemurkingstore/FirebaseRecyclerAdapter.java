@@ -13,6 +13,9 @@ public class FirebaseRecyclerAdapter<T, T1> extends RecyclerView.Adapter {
     public FirebaseRecyclerAdapter(FirebaseRecyclerOptions<T> options) {
     }
 
+    public FirebaseRecyclerAdapter(com.firebase.ui.database.FirebaseRecyclerOptions<T> options) {
+    }
+
     protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model)
     {
         holder.txtProductName.setText(model.getPname());
