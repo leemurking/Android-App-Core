@@ -1,5 +1,6 @@
 package com.leemurking.leemurkingstore;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -28,6 +29,7 @@ import com.google.firebase.storage.UploadTask;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class AdminAddNewProduct extends AppCompatActivity {
 
@@ -133,10 +135,10 @@ public class AdminAddNewProduct extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance();
 
-        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
         saveCurrentDate = currentDate.format(calendar.getTime());
 
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calendar.getTime());
 
         productRandomKey = saveCurrentDate + saveCurrentTime;
@@ -162,7 +164,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
                     public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
                         if (!task.isSuccessful())
                         {
-                            throw task.getException();
+                            throw Objects.requireNonNull(task.getException());
 
                         }
 
@@ -214,7 +216,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
                         else
                         {
                             loadingBar.dismiss();
-                            String message = task.getException().toString();
+                            String message = Objects.requireNonNull(task.getException()).toString();
                             Toast.makeText(AdminAddNewProduct.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                         }
                     }

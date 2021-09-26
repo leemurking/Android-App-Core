@@ -6,22 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
-    <ImageView
-        android:id="@+id/register_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/shoewallpaper"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/bt_down"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        />
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="data6.json"
+        app:lottie_loop="true" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/register_applogo"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:src="@drawable/shoewallpaper"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        />-->
 
     <EditText
         android:id="@+id/register_username_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_applogo"
+        android:layout_below="@+id/bt_down"
         android:background="@drawable/search_bg"
         android:padding="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="Name"
