@@ -11,8 +11,12 @@ Published by Grant Okello:
 
 ## Description:
 - An Android application that allows you to
-- Login with your username and password.
-- View my HomePage
+- Login with your username and password If you have an Account.
+- Sign Up or Register if you do not have an account.
+- Browse the app for shoes.
+- Search for some good shoe reviews
+- Shop for the shoes online
+- Purchase the shoes
 
 ## Technologies Used:
 - Java
